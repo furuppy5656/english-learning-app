@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英語スピーキングトレーナー</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="英語練習">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 英語スピーキングトレーナー</h1>
+        <p class="subtitle">ビジネス英語を毎日練習しよう！</p>
+        
+        <div class="phrase-box">
+            <h2>📝 今日のフレーズ (Day <span id="dayCount">1</span>)</h2>
+            <p id="dailyPhrase" class="phrase">Let's get started with the meeting.</p>
+            <p id="phraseJapanese" class="translation">会議を始めましょう。</p>
+            <p id="phrasePronunciation" class="pronunciation">レッツ ゲット スターテッド ウィズ ザ ミーティング</p>
+        </div>
+        
+        <div class="shadowing-section">
+            <h3>🎧 シャドーイング練習</h3>
+            <button id="playBtn" class="play-btn">▶️ お手本を再生</button>
+            <div class="speed-control">
+                <label>再生速度: <span id="speedValue">1.0</span>x</label>
+                <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+            </div>
+        </div>
+        
+        <div class="recording-section">
+            <button id="recordBtn" class="record-btn">🎤 自分の声を録音</button>
+            <div id="recordingStatus" class="status hidden">録音中...</div>
+            <audio id="audioPlayback" controls class="hidden"></audio>
+        </div>
+        
+        <div id="resultArea" class="result-area hidden">
+            <h3>あなたの発音：</h3>
+            <p id="recognizedText"></p>
+        </div>
+        
+        <div class="navigation">
+            <button id="prevBtn" class="nav-btn">◀️ 前のフレーズ</button>
+            <button id="nextBtn" class="nav-btn">次のフレーズ ▶️</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

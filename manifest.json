@@ -1,0 +1,17 @@
+{
+  "name": "英語スピーキングトレーナー",
+  "short_name": "英語練習",
+  "description": "毎日ビジネス英語を練習",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "start_url": "./index.html",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
